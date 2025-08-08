@@ -6,6 +6,8 @@
   "main": "server.mjs",
   "scripts": {
     "start": "node server.mjs",
+  "lab:start": "node lab/api/server.mjs",
+  "lab:open": "node lab/api/server.mjs & xdg-open http://localhost:${LAB_PORT:-4000} || true",
     "test": "playwright test",
     "test:ui": "playwright test --ui"
   },
@@ -15,5 +17,8 @@
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.0"
+  },
+  "dependencies": {
+    "playwright": "^1.54.2"
   }
 }
